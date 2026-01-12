@@ -12,10 +12,7 @@
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
-    "bracketSameLine": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf"
+    "bracketSameLine": true
   },
   "linter": {
     "enabled": true,
@@ -26,9 +23,21 @@
         "useImportType": "off"
       },
       "suspicious": {
+        "noConsole": {
+          "fix": "safe",
+          "level": "warn",
+          "options": { "allow": ["info", "warn", "error"] }
+        },
         "noArrayIndexKey": "off",
         "noExplicitAny": "off",
         "noUnknownAtRules": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": { "functions": ["cva", "tv", "cn", "cx"] }
+        }
       }
     }
   },
