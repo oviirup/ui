@@ -1,15 +1,16 @@
 {
-  "name": "next-template",
-  "version": "1.2.0",
+  "name": "ui",
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prepare": "lefthook install",
     "build": "next build",
     "clean": "npx rimraf .next .turbo out",
     "dev": "next dev",
     "format": "biome format --write",
-    "lint": "biome lint",
+    "lint": "biome check",
     "start": "next start"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "^1",
+    "lefthook": "^2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
