@@ -1,6 +1,7 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  // formatting config
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "biomejs.biome",
@@ -9,9 +10,7 @@
     "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit"
   },
-  "explorer.sortOrder": "type",
-  // tailwind support for cva and classNames
+  // tailwind config
   "css.validate": false,
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.classFunctions": ["cva", "tv", "cn", "clsx"]
+  "tailwindCSS.classFunctions": ["tv", "cva", "cn", "clsx"]
 }

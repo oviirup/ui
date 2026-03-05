@@ -1,13 +1,14 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
-    "clientKind": "git",
     "enabled": true,
+    "clientKind": "git",
+    "defaultBranch": "main",
     "useIgnoreFile": true
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next"]
+    "includes": ["**", "!*.min.*"]
   },
   "formatter": {
     "enabled": true,
@@ -18,41 +19,40 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "a11y": {
+        "recommended": false
+      },
       "style": {
         "noNonNullAssertion": "off",
         "useImportType": "off"
       },
       "suspicious": {
         "noConsole": {
-          "fix": "safe",
+          "fix": "none",
           "level": "warn",
-          "options": { "allow": ["info", "warn", "error"] }
+          "options": { "allow": ["warn", "error", "info", "assert"] }
         },
-        "noArrayIndexKey": "off",
         "noExplicitAny": "off",
-        "noUnknownAtRules": "off"
+        "noUnknownAtRules": "off",
+        "noArrayIndexKey": "off"
       },
       "nursery": {
         "useSortedClasses": {
           "fix": "safe",
-          "level": "error",
+          "level": "warn",
           "options": { "functions": ["cva", "tv", "cn", "cx"] }
         }
       }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
     }
   },
   "css": {
-    "parser": {
-      "tailwindDirectives": true,
-      "cssModules": true
-    }
+    "parser": { "tailwindDirectives": true }
   },
   "assist": {
-    "actions": {
-      "recommended": true,
-      "source": {
-        "organizeImports": "on"
-      }
-    }
+    "actions": { "source": { "organizeImports": "on" } }
   }
 }
