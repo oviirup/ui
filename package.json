@@ -1,39 +1,49 @@
 {
-  "name": "next",
-  "version": "1.2.0",
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
+  "imports": {
+    "#globals": "./src/app/globals.css"
+  },
   "scripts": {
     "build": "next build",
-    "clean": "npx rimraf .next .turbo out",
     "dev": "next dev",
     "format": "biome format --write",
-    "lint": "biome lint",
+    "lint": "biome check",
     "prepare": "lefthook install",
     "start": "next start",
+    "test": "bun test",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@oviirup/env": "^1.0.2",
-    "@oviirup/utils": "^1.0.7",
-    "baseui": "npm:@base-ui/react@^1.2.0",
-    "next": "^16.1.6",
+    "@oviirup/utils": "^1.0.8",
+    "@sindresorhus/transliterate": "^2.3.1",
+    "baseui": "npm:@base-ui/react@^1.3.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^1.7.0",
+    "next": "^16.2.2",
     "next-themes": "^0.4.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "sharp": "^0.34.5",
+    "react-hook-form": "^7.72.0",
+    "sonner": "^2.0.7",
     "tailwind-extras": "^2.0.6",
     "tailwind-merge": "^3.5.0",
     "tailwind-variants": "^3.2.2",
-    "zod": "^4.3.6"
+    "zod": "^4.3.6",
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.6",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/bun": "^1.3.10",
+    "@biomejs/biome": "^2.4.10",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/bun": "^1.3.11",
     "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "lefthook": "^2.1.2",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "lefthook": "^2.1.4",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
   }
 }
