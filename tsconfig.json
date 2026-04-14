@@ -11,13 +11,15 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@/registry/*": ["./registry/*"],
       "@/public/*": ["./public/*"]
     },
     "plugins": [{ "name": "next" }],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2017"
+    "target": "ES2017",
+    "types": ["node", "bun"]
   },
   "exclude": ["node_modules"],
   "include": [
